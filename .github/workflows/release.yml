@@ -1,4 +1,4 @@
-name: Auto-Tag Release
+name: Auto Tag Python Release
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Auto Tag
-        uses: Klemensas/action-autotag@stable
-        with:
+      - name: Auto tag
+        uses: butlerlogic/action-autotag@1.1.2
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
