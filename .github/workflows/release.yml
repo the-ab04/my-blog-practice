@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: Klemensas/action-autotag@stable
+
+      - name: Auto Tag
+        uses: Klemensas/action-autotag@stable
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
